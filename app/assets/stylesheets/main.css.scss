@@ -1,0 +1,90 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.usrpanel{
+	height: 50px;
+	padding: 9px;
+	font-size: 18px;
+	line-height: 20px;
+}
+#logo{
+	height: 300px;
+	background-color: #0e7d96;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif !important;
+}
+label{
+	font-weight: 400 !important;
+	vertical-align: bottom;
+}
+.mycustomform{
+	height:29px !important;
+}
+.fontshrink{
+	font-size: 9px;
+	vertical-align: sub;
+}
+#instafeedlg{
+	
+}
+#instafeedmd a, #instafeedsm a, #instafeedlg a {
+  display:inline-block;
+  border-radius: 4px;
+  position:relative;
+  border:1px solid #e1e1e1;
+}
+#instafeedlg a{
+	width: 650px !important;
+	height: 650px !important;
+	
+}
+#instafeedmd a{
+	width: 390px !important;
+}
+#instafeedsm a{
+	width: 130px;
+}
+.col-lg-7{
+	width: 650px !important;
+}
+.col-lg-5{
+	width: 390px !important;
+	float: right !important;
+}
+#instafeedsm .likes{
+	background:rgba(222,89,135,0.8);
+	font-family:sans-serif;
+	font-size:1em;
+	position:absolute;
+	color:#ffffff;
+	right:5px;
+	top:5px;
+	left:5px;
+	opacity:0;
+	text-align:center;
+	line-height:118px;
+	text-shadow:0 1px rgba(0,0,0,0.5);
+	-webkit-font-smoothing:antialiased;
+	-webkit-transition: opacity 100ms ease;
+	-moz-transition: opacity 100ms ease;
+	-o-transition: opacity 100ms ease;
+	-ms-transition: opacity 100ms ease;
+	transition: opacity 100ms ease;
+}
+#instafeedmd .likes{
+	line-height:378px;
+}
+#instafeedlg .likes{
+	line-height:638px;
+}
+.no-padding{
+	padding: 0px !important;
+}
+#instafeedmd a:hover .likes,#instafeedsm a:hover .likes,#instafeedlg a:hover .likes {
+  opacity:1;
+}
+img{
+	width: 100%;
+}

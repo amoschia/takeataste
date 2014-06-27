@@ -1,0 +1,82 @@
+<script type="text/javascript">
+	var tagvar = "foodie";
+    var feedsm = new Instafeed({
+        get: 'tagged',
+		limit: 19,
+        tagName: tagvar,
+        clientId: 'cfedecc760734aaba9ddf7db002535b2',
+		target: 'instafeedsm',
+		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+    });
+	var feedmd = new Instafeed({
+		get: 'tagged',
+		tagName: tagvar,
+		clientId: 'cfedecc760734aaba9ddf7db002535b2',
+		limit: 2,
+		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
+		mock: true,
+		resolution: 'low_resolution',
+		custom: {
+		images: [],
+		currentImage: 1,
+		showImage: function () {
+		  var result, image;
+		  image = this.options.custom.images[this.options.custom.currentImage];
+		  result = this._makeTemplate(this.options.template, {
+			model: image,
+			id: image.id,
+			link: image.link,
+			image: image.images[this.options.resolution].url,
+			caption: this._getObjectProperty(image, 'caption.text'),
+			likes: image.likes.count,
+			comments: image.comments.count,
+			location: this._getObjectProperty(image, 'location.name')
+		  });
+		  $("#instafeedmd").html(result);
+		}
+	  },
+	  success: function (data) {
+		this.options.custom.images = data.data; 
+		this.options.custom.showImage.call(this);
+	  }
+	});
+	var feedlg = new Instafeed({
+        get: 'tagged',
+        tagName: tagvar,
+        clientId: 'cfedecc760734aaba9ddf7db002535b2',
+		target: 'instafeedlg',
+		sortBy: 'most-liked',
+		resolution: 'standard_resolution',
+		limit: 1,
+		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+    });
+    feedsm.run();
+	feedmd.run();
+	feedlg.run();
+</script>
+
+
+<div id="logo"></div>
+<nav class="navbar navbar-default navbar-custom" role="navigation">
+
+	<div class="navbar-header">
+		  <a class="navbar-brand" href="#">#Takeataste</a>
+	</div>
+	<div class="navbar-right usrpanel">
+		<%= render "shared/login" %>
+		<p class="alert"><%= alert %></p>
+	</div>
+</nav>
+<div class="container">
+	<div class="row">
+	<div id="instafeedsm">
+		<div class="col-md-4 col-lg-7 no-padding">
+			<div id="instafeedlg"></div>
+			</div>
+		<div class="col-md-4 col-lg-5 no-padding">
+			<div id="instafeedmd"></div>
+			</div>
+	</div>
+		
+	</div>
+</div>

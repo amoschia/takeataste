@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+.notice:empty, .alert:empty {
+  display: none;
+  background-color: #5bc0de;
+}

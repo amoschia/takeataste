@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+	<ul class="list-inline">
+		<li>
+		Welcome, <%= current_user.username %>
+		</li>
+		<!--li>
+		<%= link_to('Edit registration', edit_user_registration_path) %>
+		</li-->
+		<li>
+		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+		</li>
+	</ul>
+<% else %>
+
+<%= form_for(:user, :html => {:class => 'form-inline'} , :url => session_path(:user)) do |f| %>
+<div class="form-group">
+  <%= f.label :Email %>
+  <%= f.text_field :email, autofocus: true, :class => 'form-control mycustomform' %>
+ </div>
+ <div class="form-group">
+  <%= f.label :Password %> <%= f.password_field :password, :class => 'form-control mycustomform' %>
+  </div>
+  <!--%= link_to "Forgot your password?", new_password_path(:user), :class => 'fontshrink' %-->
+  <!--%= f.check_box :remember_me %-->
+  <!--%= f.label :remember_me %-->
+  <%= f.submit 'Sign in', :class => 'btn btn-info'%>
+  <%= link_to('Register', new_user_registration_path)  %>
+<% end %>
+
+<% end %>
