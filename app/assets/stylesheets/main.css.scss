@@ -14,6 +14,15 @@
 	width: 437.5px;
 	height: 437.5px;
 }
+#instafeedsm .likes{
+	line-height:52.5px;
+}
+#instafeedmd .likes{
+	line-height:302.5px;
+}
+#instafeedlg .likes{
+	line-height:427.5px;
+}
 }
 @media (min-width:992px){.container{width:900px !important}
 .bgsm {
@@ -28,6 +37,16 @@
 	width: 525px;
 	height: 525px;
 }
+#instafeedsm .likes{
+	line-height:65px;
+}
+#instafeedmd .likes{
+	line-height:355px;
+}
+#instafeedlg .likes{
+	line-height:515px;
+}
+
 }
 @media (min-width:1200px){.container{width:1200px !important}
 .bgsm {
@@ -41,6 +60,15 @@
 .bglg {
 	width: 700px;
 	height: 700px;
+}
+#instafeedsm .likes{
+	line-height:90px;
+}
+#instafeedmd .likes{
+	line-height:490px;
+}
+#instafeedlg .likes{
+	line-height:690px;
 }
 }
 .usrpanel{
@@ -109,7 +137,6 @@ label{
 	left:5px;
 	opacity:0;
 	text-align:center;
-	line-height:118px;
 	text-shadow:0 1px rgba(0,0,0,0.5);
 	-webkit-font-smoothing:antialiased;
 	-webkit-transition: opacity 100ms ease;
@@ -117,12 +144,6 @@ label{
 	-o-transition: opacity 100ms ease;
 	-ms-transition: opacity 100ms ease;
 	transition: opacity 100ms ease;
-}
-#instafeedmd .likes{
-	line-height:378px;
-}
-#instafeedlg .likes{
-	line-height:638px;
 }
 .no-padding{
 	padding: 0px !important;
