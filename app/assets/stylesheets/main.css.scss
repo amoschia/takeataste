@@ -1,6 +1,48 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@media (min-width:768px){.container{width:750px !important}
+.bgsm {
+	width: 62.5px;
+	height: 62.5px;
+}
+.bgmd {
+	width: 312.5px;
+	height: 312.5px;
+}
+.bglg {
+	width: 437.5px;
+	height: 437.5px;
+}
+}
+@media (min-width:992px){.container{width:900px !important}
+.bgsm {
+	width: 75px;
+	height: 75px;
+}
+.bgmd {
+	width: 375px;
+	height: 375px;
+}
+.bglg {
+	width: 525px;
+	height: 525px;
+}
+}
+@media (min-width:1200px){.container{width:1200px !important}
+.bgsm {
+	width: 100px;
+	height: 100px;
+}
+.bgmd {
+	width: 500px;
+	height: 500px;
+}
+.bglg {
+	width: 700px;
+	height: 700px;
+}
+}
 .usrpanel{
 	height: 50px;
 	padding: 9px;
@@ -11,7 +53,9 @@
 	height: 300px;
 	background-color: #0e7d96;
 }
-
+.container{
+	padding: 0px !important;
+}
 body{
 	font-family: 'Open Sans', sans-serif !important;
 }
@@ -33,25 +77,26 @@ label{
   display:inline-block;
   border-radius: 4px;
   position:relative;
-  border:1px solid #e1e1e1;
+  border:0px solid #e1e1e1;
 }
 #instafeedlg a{
-	width: 650px !important;
-	height: 650px !important;
-	
+	width: 100% !important;
+	height: 100% !important;
 }
 #instafeedmd a{
-	width: 390px !important;
+	width: 100% !important;
 }
 #instafeedsm a{
-	width: 130px;
 }
-.col-lg-7{
-	width: 650px !important;
-}
-.col-lg-5{
-	width: 390px !important;
-	float: right !important;
+//.col-lg-7{
+//	width: 650px !important;
+//}
+//.col-lg-5{
+//	width: 390px !important;
+//	float: right !important;
+//}
+.row{
+	margin: 0px !important;
 }
 #instafeedsm .likes{
 	background:rgba(222,89,135,0.8);
@@ -87,4 +132,31 @@ label{
 }
 img{
 	width: 100%;
+}
+.bgsm {
+  position:relative;
+  display:block;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-size:cover;
+}
+.bgmd {
+  position:relative;
+  display:block;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-size:cover;
+}
+.bglg {
+  position:relative;
+  display:block;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-size:cover;
 }

@@ -2,18 +2,18 @@
 	var tagvar = "foodie";
     var feedsm = new Instafeed({
         get: 'tagged',
-		limit: 19,
+		limit: 22,
         tagName: tagvar,
         clientId: 'cfedecc760734aaba9ddf7db002535b2',
 		target: 'instafeedsm',
-		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+		template: '<a href="{{link}}" target="_blank"><div class="bgsm" style="background-image:url({{image}})"></div><div class="likes">&hearts; {{likes}}</div></a>'
     });
 	var feedmd = new Instafeed({
 		get: 'tagged',
 		tagName: tagvar,
 		clientId: 'cfedecc760734aaba9ddf7db002535b2',
 		limit: 2,
-		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
+		template: '<a href="{{link}}" target="_blank"><div class="bgmd" style="background-image:url({{image}})"></div><div class="likes">&hearts; {{likes}}</div></a>',
 		mock: true,
 		resolution: 'low_resolution',
 		custom: {
@@ -48,7 +48,7 @@
 		sortBy: 'most-liked',
 		resolution: 'standard_resolution',
 		limit: 1,
-		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+		template: '<a href="{{link}}" target="_blank"><div class="bglg" style="background-image:url({{image}})"></div><div class="likes">&hearts; {{likes}}</div></a>'
     });
     feedsm.run();
 	feedmd.run();
@@ -70,10 +70,10 @@
 <div class="container">
 	<div class="row">
 	<div id="instafeedsm">
-		<div class="col-md-4 col-lg-7 no-padding">
+		<div class="col-sm-7 col-md-7 col-lg-7 no-padding">
 			<div id="instafeedlg"></div>
 			</div>
-		<div class="col-md-4 col-lg-5 no-padding">
+		<div class="col-sm-5 col-md-5 col-lg-5 no-padding">
 			<div id="instafeedmd"></div>
 			</div>
 	</div>
