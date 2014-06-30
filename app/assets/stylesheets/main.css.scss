@@ -1,6 +1,12 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-tone1: #EE8153;
+$primary-light: #FF9C72;
+$primary-dark: #A14C28;
+$secondary-tone1: #53EED9;
+$secondary-tone2: #18A18F;
+$footer-tone: #494f57;
 @media (min-width:768px){.container{width:750px !important}
 .bgsm {
 	width: 62.5px;
@@ -78,15 +84,16 @@
 	line-height: 20px;
 }
 #logo{
-	height: 300px;
-	background-color: #0e7d96;
+	height: 400px;
+	background-color: $primary-tone1;
+	//background-image: image-url('brickwalls.jpg');
+	background-size: cover;
 }
 .container{
 	padding: 0px !important;
 }
 body{
 	font-family: 'Open Sans', sans-serif !important;
-	line-height: 0px !important;
 }
 label{
 	font-weight: 400 !important;
@@ -101,6 +108,9 @@ label{
 }
 #instafeedlg{
 	
+}
+.demo{
+	line-height: 0px !important;
 }
 #instafeedmd a, #instafeedsm a, #instafeedlg a {
   display:inline-block;
@@ -181,4 +191,44 @@ img{
   bottom:0;
   left:0;
   background-size:cover;
+}
+.content{
+	color: white;
+	font-size: 200px;
+}
+.usage{
+	height: 1085px;
+	background-color: white;
+	padding: 0px 0px !important;
+	text-align: center;
+}
+.intro{
+	height: 500px;
+	background-color: $primary-tone1;
+	padding: 100px 0px !important;
+	text-align: center;
+}
+.example{
+	height: 500px;
+	background-color: white;
+	padding: 100px 0px !important;
+	text-align: center;
+}
+.registration{
+	height: 500px;
+	background-color: $secondary-tone2;
+	padding: 100px 0px !important;
+	text-align: center;
+}
+.content-whitebg{
+	color: $secondary-tone1;
+}
+footer{
+	height: 300px;
+	background-color: $footer-tone;
+	padding: 100px 0px !important;
+	text-align: center;
+}
+.footer{
+	font-size: 100px;
 }

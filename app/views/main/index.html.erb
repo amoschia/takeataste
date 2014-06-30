@@ -2,11 +2,14 @@
 	var tagvar = "foodie";
     var feedsm = new Instafeed({
         get: 'tagged',
-		limit: 22,
+		limit: 600,
         tagName: tagvar,
         clientId: 'cfedecc760734aaba9ddf7db002535b2',
 		target: 'instafeedsm',
-		template: '<a href="{{link}}" target="_blank"><div class="bgsm" style="background-image:url({{image}})"></div><div class="likes">&hearts; {{likes}}</div></a>'
+		template: '<a href="{{link}}" target="_blank"><div class="bgsm" style="background-image:url({{image}})"></div><div class="likes">&hearts; {{likes}}</div></a>',
+		filter: function(image) {
+			return image.tags.indexOf('foodie') >= 0;
+		  }
     });
 	var feedmd = new Instafeed({
 		get: 'tagged',
@@ -67,16 +70,40 @@
 		<p class="alert"><%= alert %></p>
 	</div>
 </nav>
-<div class="container">
-	<div class="row">
-	<div id="instafeedsm">
-		<div class="col-sm-7 col-md-7 col-lg-7 no-padding">
-			<div id="instafeedlg"></div>
+<section class="usage">
+	<div class="container">
+		<div class="container content content-whitebg">
+			HELLO
+		</div>
+		<div class="row demo">
+			<div id="instafeedsm">
+				<div class="col-sm-7 col-md-7 col-lg-7 no-padding">
+					<div id="instafeedlg"></div>
+				</div>
+				<div class="col-sm-5 col-md-5 col-lg-5 no-padding">
+					<div id="instafeedmd"></div>
+				</div>
 			</div>
-		<div class="col-sm-5 col-md-5 col-lg-5 no-padding">
-			<div id="instafeedmd"></div>
-			</div>
+		</div>
 	</div>
-		
+</section>
+<section class="intro">
+	<div class="container content">
+		HELLO
 	</div>
-</div>
+</section>
+<section class="example">
+	<div class="container content">
+		HELLO
+	</div>
+</section>
+<section class="registration">
+	<div class="container content">
+		HELLO
+	</div>
+</section>
+<footer>
+	<div class="container footer">
+		HELLO
+	</div>
+</footer>
