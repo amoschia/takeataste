@@ -29,6 +29,9 @@ $footer-tone: #494f57;
 #instafeedlg .likes{
 	line-height:427.5px;
 }
+.hidden-sm{
+	display: hidden;
+}
 }
 @media (min-width:992px){.container{width:900px !important}
 .bgsm {
@@ -52,7 +55,9 @@ $footer-tone: #494f57;
 #instafeedlg .likes{
 	line-height:515px;
 }
-
+.hidden-md{
+	display: hidden;
+}
 }
 @media (min-width:1200px){.container{width:1200px !important}
 .bgsm {
@@ -81,7 +86,8 @@ $footer-tone: #494f57;
 	height: 50px;
 	padding: 9px;
 	font-size: 18px;
-	line-height: 20px;
+	line-height: 30px;
+	text-align: right;
 }
 #logo{
 	height: 400px;
@@ -192,6 +198,17 @@ img{
   left:0;
   background-size:cover;
 }
+.searchbar{
+	float: left;
+	height: 50px;
+	margin-right: 2%;
+}
+.navbtns{
+	margin: 0 auto;
+	height: 50px;
+	width: 500px;
+	float: left;
+}
 .content{
 	color: white;
 	font-size: 200px;
@@ -231,4 +248,8 @@ footer{
 }
 .footer{
 	font-size: 100px;
+}
+.center{
+	width: 800px;
+	margin: 0 auto;
 }

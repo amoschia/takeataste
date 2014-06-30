@@ -61,13 +61,38 @@
 
 <div id="logo"></div>
 <nav class="navbar navbar-default navbar-custom" role="navigation">
-
-	<div class="navbar-header">
-		  <a class="navbar-brand" href="#">#Takeataste</a>
-	</div>
-	<div class="navbar-right usrpanel">
-		<%= render "shared/login" %>
-		<p class="alert"><%= alert %></p>
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="navbar-header col-sm-8 col-lg-6">
+				  <a class="navbar-brand" href="#">#Takeataste</a>
+			</div>
+			
+			<div class="navbtns col-sm-4 col-lg-6">
+				<div class="center">
+					<div class="searchbar">
+						<form class="navbar-form navbar-right" role="search">
+						
+						 <button type="submit" class="btn btn-default btn-responsive">takeapeek</button>
+						 <div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						 </div>
+						</form> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<ul class="nav navbar-nav col-sm-7  col-lg-7">
+				 <li class="active"><a href="#">#featured</a></li>
+				 <li><a href="#">mymenu</a></li>
+				 <li><a href="#">takeawalk</a></li>
+				 <li><a href="#">takeabreak</a></li>
+			</ul>
+			<div class="usrpanel col-sm-5  col-lg-5">
+				<%= render "shared/login" %>
+				<p class="alert"><%= alert %></p>
+			</div>
+		</div>
 	</div>
 </nav>
 <section class="usage">
